@@ -1,0 +1,13 @@
+<p style="font-weight: bold">Details</p>
+<button class="btn btn-primary" (click)="onDisplayClick()">
+  Toggle details
+</button>
+<p *ngIf="displayDetails">Secret password = Tuna</p>
+<p
+  *ngFor="let click of clicks"
+  [ngStyle]="{ backgroundColor: clicks.length > 3 ? 'blue' : 'transparent' }"
+  [ngClass]="{ extraItems: clicks.length > 3 }"
+>
+  {{ click }}
+</p>
+<hr />
